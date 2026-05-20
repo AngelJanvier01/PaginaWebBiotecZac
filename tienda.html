@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BIOTECZAC | Tienda en línea</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --teal-900: #111820;
+            --teal-700: #007eb5;
+            --teal-500: #00a9e0;
+            --slate-100: #edf7fb;
+            --blue-rgb: 0, 126, 181
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: "Nunito", system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(180deg, #fff, #eaf7fc);
+            color: #111820
+        }
+
+        .wrap {
+            max-width: 900px;
+            margin: auto;
+            padding: 22px
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, .7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(var(--blue-rgb), .12)
+        }
+
+        .nav {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 0
+        }
+
+        .brand {
+            display: flex;
+            gap: 12px;
+            align-items: center
+        }
+
+        .brand img {
+            width: clamp(92px, 10vw, 130px);
+            height: auto;
+            aspect-ratio: 254 / 189;
+            object-fit: contain
+        }
+
+        .brand .t {
+            font-weight: 900;
+            color: var(--teal-700)
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        .ghost {
+            border: 2px solid rgba(var(--blue-rgb), .28);
+            padding: 9px 14px;
+            border-radius: 14px;
+            font-weight: 800;
+            color: var(--teal-700)
+        }
+
+        main {
+            min-height: calc(100vh - 70px);
+            display: grid;
+            place-items: center;
+            padding: 30px
+        }
+
+        .card {
+            max-width: 680px;
+            width: 100%;
+            background: #fff;
+            border: 1px solid rgba(var(--blue-rgb), .14);
+            border-radius: 20px;
+            box-shadow: 0 22px 60px rgba(var(--blue-rgb), .18);
+            padding: 24px;
+            text-align: center
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            color: var(--teal-900)
+        }
+
+        p {
+            margin: 0 0 14px;
+            color: #4b626c
+        }
+
+        .cta {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--teal-500), var(--teal-700));
+            color: #fff;
+            padding: 12px 18px;
+            border-radius: 14px;
+            font-weight: 900;
+            margin-top: 8px
+        }
+
+        /* Bloqueo móvil como el sitio principal */
+        .blocker {
+            position: fixed;
+            inset: 0;
+            background: rgba(11, 18, 32, .92);
+            color: #fff;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 24px;
+            text-align: center
+        }
+
+        .blocker .card {
+            max-width: 620px;
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .18);
+            backdrop-filter: blur(8px);
+            border-radius: 18px;
+            padding: 22px
+        }
+
+        @media (max-width: 1024px) {
+            .blocker {
+                display: flex
+            }
+
+            body {
+                overflow: hidden
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav">
+            <a class="brand" href="index.html"><img src="LOGOBIOTEC.png" alt="BIOTECZAC"><span class="t">BIOTECZAC</span></a>
+            <a class="ghost" href="index.html">← Regresar</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="card">
+            <h1>Tienda en mantenimiento</h1>
+            <p>Estamos preparando una experiencia de compra segura y ágil. Por ahora, realiza tus pedidos con nuestro
+                equipo comercial.</p>
+            <p><strong>Correo:</strong> contacto@bioteczac.mx <em></em> · <strong>Tel.:</strong> +52 (492) 162 7863
+                <em></em></p>
+            <a class="cta" href="index.html#contacto">Contactar Ventas :)</a>
+        </div>
+    </main>
+
+    <div class="blocker" aria-hidden="false">
+        <div class="card" role="dialog" aria-modal="true">
+            <h2>Vista no disponible en dispositivos móviles</h2>
+            <p>Accede desde una computadora o amplía la ventana.</p>
+        </div>
+    </div>
+</body>
+
+</html>
